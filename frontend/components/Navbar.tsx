@@ -28,7 +28,7 @@ export default function Navbar() {
     return (
         <>
             {/* Mobile Header */}
-            <header className="fixed top-0 left-0 right-0 h-16 bg-slate-900 flex items-center justify-between px-6 z-40 md:hidden border-b border-slate-800">
+            <header className="fixed top-0 left-0 right-0 h-16 bg-slate-900 flex items-center justify-between px-6 z-40 md:hidden border-b border-slate-800 [padding-top:env(safe-area-inset-top)] [height:calc(4rem+env(safe-area-inset-top))]">
                 <div className="flex items-center gap-2">
                     <div className="bg-blue-600 p-1.5 rounded-lg">
                         <BarChart3 size={18} className="text-white" />
@@ -57,7 +57,7 @@ export default function Navbar() {
             </AnimatePresence>
 
             {/* Navbar Sidebar */}
-            <nav className={`fixed left-0 top-0 h-full w-64 bg-slate-900 text-white p-6 shadow-xl z-50 transition-transform duration-300 ease-in-out ${isOpen ? 'translate-x-0' : '-translate-x-full md:translate-x-0'
+            <nav className={`fixed left-0 top-0 h-full w-64 bg-slate-900 text-white p-6 [padding-top:calc(1.5rem+env(safe-area-inset-top))] shadow-xl z-50 transition-transform duration-300 ease-in-out ${isOpen ? 'translate-x-0' : '-translate-x-full md:translate-x-0'
                 }`}>
                 <div className="flex items-center gap-3 mb-10">
                     <div className="bg-blue-600 p-2 rounded-lg">

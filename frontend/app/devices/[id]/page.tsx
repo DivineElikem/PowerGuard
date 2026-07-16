@@ -98,10 +98,10 @@ export default function DeviceDetailsPage({ params }: { params: Promise<{ id: st
 
             <div className="flex flex-col md:flex-row md:items-center justify-between gap-6">
                 <div>
-                    <h1 className="text-4xl font-black text-slate-900 tracking-tight capitalize mb-2">
+                    <h1 className="text-3xl md:text-4xl font-black text-slate-900 tracking-tight capitalize mb-2">
                         {deviceId.replace('_', ' ')}
                     </h1>
-                    <div className="flex items-center gap-3">
+                    <div className="flex flex-wrap items-center gap-3">
                         <span className={`px-4 py-1.5 rounded-full text-sm font-black flex items-center gap-2 ${isAnomaly ? 'bg-red-50 text-red-600' : 'bg-green-50 text-green-600'
                             }`}>
                             <Activity size={14} /> {isAnomaly ? 'Anomaly Detected' : 'Operating Normally'}
@@ -113,15 +113,15 @@ export default function DeviceDetailsPage({ params }: { params: Promise<{ id: st
                 </div>
             </div>
 
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 md:gap-8">
                 {/* Real-time Stats */}
-                <div className="lg:col-span-2 space-y-8">
-                    <div className="bg-white rounded-[2.5rem] p-8 border border-slate-100 shadow-sm relative overflow-hidden">
-                        <h3 className="text-lg font-bold text-slate-900 mb-8 flex items-center gap-2">
+                <div className="lg:col-span-2 space-y-6 md:space-y-8">
+                    <div className="bg-white rounded-[1.5rem] md:rounded-[2.5rem] p-5 md:p-8 border border-slate-100 shadow-sm relative overflow-hidden">
+                        <h3 className="text-lg font-bold text-slate-900 mb-6 md:mb-8 flex items-center gap-2">
                             <Zap size={20} className="text-yellow-500" /> Power Consumption (Watts)
                         </h3>
 
-                        <div className="h-[350px] w-full">
+                        <div className="h-[260px] md:h-[350px] w-full">
                             <ResponsiveContainer width="100%" height="100%">
                                 <LineChart data={readings.map(r => ({ ...r, power: r.current * r.voltage }))}>
                                     <CartesianGrid strokeDasharray="3 3" vertical={false} stroke="#f1f5f9" />
@@ -160,7 +160,7 @@ export default function DeviceDetailsPage({ params }: { params: Promise<{ id: st
                         </div>
                     </div>
 
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6">
                         <div className="bg-white p-6 rounded-3xl border border-slate-100 shadow-sm">
                             <p className="text-xs font-bold text-slate-400 uppercase tracking-widest mb-4 flex items-center gap-2">
                                 <Clock size={14} className="text-blue-500" /> Recent Average Current
@@ -188,7 +188,7 @@ export default function DeviceDetailsPage({ params }: { params: Promise<{ id: st
 
                 {/* Sidebar Controls */}
                 <div className="space-y-6">
-                    <div className="bg-slate-900 rounded-[2.5rem] p-8 text-white shadow-xl relative overflow-hidden group">
+                    <div className="bg-slate-900 rounded-[1.5rem] md:rounded-[2.5rem] p-6 md:p-8 text-white shadow-xl relative overflow-hidden group">
                         <div className="relative z-10">
                             <h3 className="text-xl font-bold mb-6 flex items-center gap-2">
                                 <AlertTriangle size={20} className="text-red-400" /> Sensitivity Settings
@@ -249,7 +249,7 @@ export default function DeviceDetailsPage({ params }: { params: Promise<{ id: st
                         </div>
                     </div>
 
-                    <div className="bg-white rounded-[2.5rem] p-8 border border-slate-100 shadow-sm">
+                    <div className="bg-white rounded-[1.5rem] md:rounded-[2.5rem] p-6 md:p-8 border border-slate-100 shadow-sm">
                         <h4 className="font-bold text-slate-900 flex items-center gap-2 mb-4">
                             <Info size={18} className="text-blue-500" /> Student Lab Note
                         </h4>

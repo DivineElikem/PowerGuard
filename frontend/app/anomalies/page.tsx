@@ -194,7 +194,7 @@ export default function AnomaliesPage() {
             </div>
 
             {/* Learning Corner */}
-            <div className="bg-slate-900 rounded-[2rem] p-8 text-white shadow-xl relative overflow-hidden">
+            <div className="bg-slate-900 rounded-[1.5rem] md:rounded-[2rem] p-6 md:p-8 text-white shadow-xl relative overflow-hidden">
                 <div className="relative z-10 max-w-2xl">
                     <h3 className="text-xl font-bold mb-3 flex items-center gap-2">
                         🔍 Educational Insight: Thresholds

@@ -155,7 +155,7 @@ export default function Home() {
       </section>
 
       {/* Learning Corner */}
-      <div className="bg-blue-600 rounded-[2rem] p-8 text-white shadow-xl shadow-blue-200 relative overflow-hidden">
+      <div className="bg-blue-600 rounded-[1.5rem] md:rounded-[2rem] p-6 md:p-8 text-white shadow-xl shadow-blue-200 relative overflow-hidden">
         <div className="relative z-10 max-w-2xl">
           <h3 className="text-xl font-bold mb-3 flex items-center gap-2">
             💡 Student Learning Corner

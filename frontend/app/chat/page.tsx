@@ -78,7 +78,7 @@ export default function ChatPage() {
             {/* Messages Window */}
             <div
                 ref={scrollRef}
-                className="flex-1 overflow-y-auto p-4 md:p-8 space-y-4 md:y-6 scroll-smooth"
+                className="flex-1 overflow-y-auto p-4 md:p-8 space-y-4 md:space-y-6 scroll-smooth"
             >
                 <AnimatePresence initial={false}>
                     {messages.map((msg, index) => (
