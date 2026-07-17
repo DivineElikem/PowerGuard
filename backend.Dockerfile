@@ -21,7 +21,6 @@ WORKDIR /app
 COPY --from=builder /root/.local /root/.local
 COPY app/ ./app/
 COPY main.py .
-COPY energy_meter.db .
 
 # Ensure scripts in .local/bin are in PATH
 ENV PATH=/root/.local/bin:$PATH

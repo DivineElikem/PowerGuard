@@ -1,6 +1,6 @@
-# Smart Energy Meter - Frontend
+# PowerGuard - Frontend
 
-This is the frontend application for the Smart Energy Meter Monitoring System. It provides a real-time dashboard for visualizing energy consumption, forecasting usage, and interacting with an AI-powered "Energy Boss" chatbot.
+This is the frontend application for the PowerGuard Monitoring System. It provides a real-time dashboard for visualizing energy consumption, forecasting usage, and interacting with an AI-powered "PowerGuard" chatbot.
 
 ## 🛠 Tech Stack
 
@@ -16,7 +16,7 @@ This is the frontend application for the Smart Energy Meter Monitoring System. I
 - **Real-time Data Dashboard**: Live visualization of voltage, current, and power.
 - **Energy Forecasting**: 7-day and 30-day usage predictions with interactive charts.
 - **Anomaly Detection List**: View historical and real-time anomalies detected by the system.
-- **AI Chatbot**: "Energy Boss" persona for answering energy-related queries.
+- **AI Chatbot**: "PowerGuard" persona for answering energy-related queries.
 - **Responsive Design**: Fully optimized for mobile and desktop viewing.
 
 ## ⚙️ Getting Started

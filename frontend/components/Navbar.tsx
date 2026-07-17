@@ -33,7 +33,7 @@ export default function Navbar() {
                     <div className="bg-blue-600 p-1.5 rounded-lg">
                         <BarChart3 size={18} className="text-white" />
                     </div>
-                    <h1 className="text-lg font-bold text-white">EnergyMeter</h1>
+                    <h1 className="text-lg font-bold text-white">PowerGuard</h1>
                 </div>
                 <button
                     onClick={() => setIsOpen(!isOpen)}
@@ -63,7 +63,7 @@ export default function Navbar() {
                     <div className="bg-blue-600 p-2 rounded-lg">
                         <BarChart3 size={24} />
                     </div>
-                    <h1 className="text-xl font-bold tracking-tight">EnergyMeter</h1>
+                    <h1 className="text-xl font-bold tracking-tight">PowerGuard</h1>
                 </div>
 
                 <div className="space-y-2">

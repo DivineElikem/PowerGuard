@@ -56,4 +56,4 @@ app.include_router(devices.router, prefix="/devices", tags=["Devices"])
 
 @app.get("/")
 def root():
-    return {"message": "Welcome to Smart Energy Meter Backend"}
+    return {"message": "Welcome to PowerGuard Backend"}

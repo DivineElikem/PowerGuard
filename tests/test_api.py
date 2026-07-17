@@ -32,7 +32,7 @@ client = TestClient(app)
 def test_read_main():
     response = client.get("/")
     assert response.status_code == 200
-    assert response.json() == {"message": "Welcome to Smart Energy Meter Backend"}
+    assert response.json() == {"message": "Welcome to PowerGuard Backend"}
 
 def test_health_check():
     response = client.get("/health/")
