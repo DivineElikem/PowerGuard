@@ -1,13 +1,18 @@
-fastapi
-uvicorn
-sqlalchemy
-paho-mqtt
-prophet
-groq
-python-dotenv
-apscheduler
-pydantic
-pydantic-settings
-pandas
-psycopg2-binary
-firebase-admin
+# Pinned deliberately. These were unpinned, so the image rebuilt in July 2026
+# picked up pandas 3.0 (released 2026-01-21), which removed the 'H' frequency
+# alias and broke /forecast with a 500. Any rebuild could pull a breaking major.
+# numpy is transitive but pinned too: it gates both prophet and pandas.
+fastapi==0.124.0
+uvicorn==0.38.0
+sqlalchemy==2.0.44
+paho-mqtt==2.1.0
+prophet==1.2.1
+groq==0.37.1
+python-dotenv==1.2.1
+apscheduler==3.11.1
+pydantic==2.12.5
+pydantic-settings==2.12.0
+pandas==2.3.3
+numpy==2.3.5
+psycopg2-binary==2.9.11
+firebase-admin==7.1.0

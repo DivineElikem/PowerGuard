@@ -34,7 +34,7 @@ def generate_forecast(db: Session, days: int = 7):
     m = Prophet(interval_width=0.95, yearly_seasonality=False, weekly_seasonality=True, daily_seasonality=True)
     m.fit(df)
     
-    future = m.make_future_dataframe(periods=days * 24, freq='H')
+    future = m.make_future_dataframe(periods=days * 24, freq='h')
     forecast = m.predict(future)
     
     result = forecast[['ds', 'yhat']].tail(days * 24)
